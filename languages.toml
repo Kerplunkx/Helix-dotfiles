@@ -1,3 +1,4 @@
+# NIM
 [language-server]
 nimlsp = {command = "nimlsp"}
 glslls = {command = "glslls"}
@@ -18,7 +19,12 @@ indent = { tab-width = 2, unit = "  " }
 language-servers = ["nimlsp"]
 auto-format = true
 
+[[grammar]]
+name = "nim"
+source = { git = "https://github.com/aMOPel/tree-sitter-nim", rev = "240239b232550e431d67de250d1b5856209e7f06" }
 
+
+#GLSL
 [language-sever.glslls]
 command = "glslls"
 
@@ -31,3 +37,18 @@ comment-token = "//"
 indent = { tab-width = 4, unit = "    " }
 injection-regex = "glsl"
 language-servers = ["glslls"]
+
+#ODIN
+[[language]]
+name = "odin"
+auto-format = false
+scope = "source.odin"
+file-types = ["odin"]
+roots = ["ols.json"]
+language-servers = [ "ols" ]
+comment-token = "//"
+indent = { tab-width = 4, unit = "\t" }
+
+[[grammar]]
+name = "odin"
+source = { git = "https://github.com/ap29600/tree-sitter-odin", rev = "b219207e49ffca2952529d33e94ed63b1b75c4f1" }
