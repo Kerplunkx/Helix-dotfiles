@@ -1,5 +1,13 @@
-theme = "catppuccin_mocha"
+theme = "kanagawa"
 [editor]
 line-number = "relative"
 bufferline = "always"
 color-modes = true
+
+[editor.indent-guides]
+render = true
+character = "╎"
+skip-levels = 1
+
+[editor.statusline]
+left = ["mode", "spinner", "file-base-name"]
